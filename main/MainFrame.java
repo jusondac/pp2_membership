@@ -1,14 +1,11 @@
 package main;
 
-import com.sun.tools.javac.Main;
 import dao.JenisMemberDao;
 import dao.MemberDao;
-import jenis_member.JenisMember;
 import jenis_member.JenisMemberFrame;
 import member.MemberFrame;
 
 import javax.swing.*;
-import javax.swing.plaf.PanelUI;
 import java.awt.*;
 
 public class MainFrame extends JFrame {

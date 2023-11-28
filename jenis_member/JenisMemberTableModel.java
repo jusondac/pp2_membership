@@ -1,5 +1,7 @@
 package jenis_member;
 
+import member.Member;
+
 import javax.swing.table.*;
 import java.util.List;
 
@@ -52,5 +54,10 @@ public class JenisMemberTableModel extends AbstractTableModel {
         } else {
             throw new IndexOutOfBoundsException("Index tidak valid");
         }
+    }
+    public void update(JenisMember update, int selected) {
+        data.set(selected, update);
+        fireTableCellUpdated(selected, 0);
+        fireTableCellUpdated(selected, 1);
     }
 }

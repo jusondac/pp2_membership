@@ -99,12 +99,6 @@ public class MemberFrame extends JFrame {
         this.tableModel.remove(selected);
     }
 
-    public JComboBox getComboJenis() {
-        return comboJenis;
-    }
-    public void setComboJenis(JComboBox comboJenis) {
-        this.comboJenis = comboJenis;
-    }
     public void addMember(Member member) {
         tableModel.add(member);
         textFieldNama.setText("");

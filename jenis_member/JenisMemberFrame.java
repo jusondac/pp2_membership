@@ -3,6 +3,7 @@ package jenis_member;
 import javax.swing.*;
 import java.util.*;
 import dao.JenisMemberDao;
+import member.Member;
 
 public class JenisMemberFrame extends JFrame {
     private List<JenisMember> jenisMemberList;
@@ -60,13 +61,23 @@ public class JenisMemberFrame extends JFrame {
         return textFieldNama.getText();
     }
 
+    public void setNama(String nama) {
+        this.textFieldNama.setText(nama);
+    }
+
     public void addJenisMember(JenisMember jenisMember) {
         tableModel.add(jenisMember);
         textFieldNama.setText("");
     }
     public JTable getTable() { return this.table; }
+    public boolean isEmptyField() {
+        return Objects.equals(this.textFieldNama.getText(), "");
+    }
 
     public void removeData(int selected) {
         this.tableModel.remove(selected);
+    }
+    public void updateJenisMember(JenisMember update, int selected) {
+        this.tableModel.update(update, selected);
     }
 }

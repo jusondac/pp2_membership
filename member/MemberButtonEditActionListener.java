@@ -27,7 +27,6 @@ public class MemberButtonEditActionListener implements ActionListener {
         int selected = table.getSelectedRow();
         String nama = (String) table.getValueAt(selected,0);
         if (this.memberFrame.isEmptyField()) {
-            Member member = this.memberDao.findByName(nama);
             memberFrame.setTextFieldNama(nama);
         } else {
             Member updateMember = new Member();
